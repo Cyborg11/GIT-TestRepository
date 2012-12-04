@@ -1,4 +1,4 @@
-package de.hofuniversity.bachelor.lectureopensourcedevelopment.versioncontrolpractical.helloworld.solution.example;
+package helloworld.solution.example;
 
 import java.awt.FlowLayout;
 import java.awt.Font;

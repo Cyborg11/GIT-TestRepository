@@ -1,4 +1,4 @@
-package de.hofuniversity.bachelor.lectureopensourcedevelopment.versioncontrolpractical.helloworld.solution.example;
+package helloworld.solution.example;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

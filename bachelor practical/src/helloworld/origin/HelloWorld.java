@@ -1,4 +1,4 @@
-package de.hofuniversity.bachelor.lectureopensourcedevelopment.versioncontrolpractical.helloworld.origin;
+package helloworld.origin;
 
 public class HelloWorld {
 	
