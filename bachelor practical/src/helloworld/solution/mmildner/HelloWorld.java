@@ -1,10 +1,12 @@
 package helloworld.solution.mmildner;
 
+import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.Point;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class HelloWorld extends JFrame
 {
@@ -29,51 +31,35 @@ public class HelloWorld extends JFrame
 		
 		setVisible(true);
 	}
-		
-	private class AnimateThread extends Thread
+	
+	public static void main(String[] args)
 	{
-		private JLabel label;
-		private JFrame frame;
-		
-		public AnimateThread(JFrame frame, JLabel label)
+		EventQueue.invokeLater(new Runnable()
 		{
-			this.frame = frame;
-			this.label = label;
-		}
-		
-		public void run()
-		{
-//			int height = frame.getHeight();
-			int width = frame.getWidth();
-			
-			while (true)
+			public void run()
 			{
-				int x = label.getX();
-				int y = label.getY();
-				int size = label.getSize().width;
-				
-				if (x < width)
-				{
-					label.setLocation(new Point(x+1, y));
-				}
-				else
-				{
-					label.setLocation(-size/2, y);
-				}
 				try
 				{
-					Thread.sleep(10);
+					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+					new HelloWorld("Hello World!");
 				}
-				catch (InterruptedException e)
+				catch (ClassNotFoundException e)
+				{
+					e.printStackTrace();
+				}
+				catch (InstantiationException e)
+				{
+					e.printStackTrace();
+				}
+				catch (IllegalAccessException e)
+				{
+					e.printStackTrace();
+				}
+				catch (UnsupportedLookAndFeelException e)
 				{
 					e.printStackTrace();
 				}
 			}
-		}
-	}
-	
-	public static void main(String[] args)
-	{
-		new HelloWorld("Hello World!");
+		});
 	}
 }
