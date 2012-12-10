@@ -1,0 +1,2 @@
+1.) Develop a more effective main method to test the method isPrime in the class Primes. Fix bugs, if you find any.
+2.) Add a method getPrimes(int start, int end) to the class Primes
