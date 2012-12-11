@@ -34,6 +34,7 @@ public class AnimateThread extends Thread
 			{
 				label.setLocation(-size/2, y);
 			}
+			
 			try
 			{
 				Thread.sleep(10);

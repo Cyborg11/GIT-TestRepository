@@ -20,7 +20,7 @@ public class HelloWorld extends JFrame
 		lHelloWorld.setFont(new Font(lHelloWorld.getFont().getFontName(), Font.BOLD, 30));
 		getContentPane().add(lHelloWorld);
 		
-		pack();
+//		pack();
 		setSize(400, 300);
 		setResizable(false);
 		setLocationRelativeTo(null);	// Positionierung des Frames in der Mitte des Bildschirms
